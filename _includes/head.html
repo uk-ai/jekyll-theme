@@ -5,6 +5,7 @@
   {%- include seo-info.html -%}
   <title>ML@CL{% if page.title %} {{page.title}}{% endif %}</title>
   <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% include font-awesome.html %}
   {% include netlify/cms-widget.html %}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}

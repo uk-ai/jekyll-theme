@@ -1,119 +1,100 @@
 ---
-layout: page
+layout: default
 ---
 
-<section class="block block__hero block__hero--standard">
-  <div class="container">
-    {% include top-row-logo-and-menu.html %}
-    <!-- Second Row | Title & Nav -->
-    <div class="row">
-      <div class="column">
-        <span class="hero__dot hero__dot--bottom-left"></span>
-        <span class="hero__dot hero__dot--bottom-right"></span>
-        <div class="hero__item hero__item--top-left">
-          <a href="{{site.url}}/people/" class="back-to-collection">
-            <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Home-Concept-v1.0-b" transform="translate(-1583.000000, -759.000000)" fill="#FFFFFF">
-                  <g id="Down" transform="translate(1583.000000, 759.000000)">
-                    <rect id="Rectangle" x="8" y="8" width="4" height="4"></rect>
-                    <rect id="Rectangle" x="4" y="4" width="4" height="4"></rect>
-                    <rect id="Rectangle" x="0" y="0" width="4" height="4"></rect>
-                    <rect id="Rectangle" x="12" y="4" width="4" height="4"></rect>
-                    <rect id="Rectangle" x="16" y="0" width="4" height="4"></rect>
-                  </g>
-                                        </g>
-              </g>
-            </svg>
-            <p>Back to people</p>
-          </a>
-        </div>
-        <div class="hero__item hero__item--bottom-left">
-          <h1 class="hero__title hero__title--people">{{ page.title }}</h1>
-        </div>
-      </div>
-      <div class="column">
-        <span class="hero__dot hero__dot--bottom-right"></span>
-      </div>
-      <div class="column no-mobile">
-        <span class="hero__dot hero__dot--bottom-right"></span>
-      </div>
-      <div class="column no-mobile">
-        <span class="hero__dot hero__dot--bottom-right"></span>
-      </div>
-      <div class="column no-mobile">
-        <span class="hero__dot hero__dot--bottom-right"></span>
-      </div>
-      <div class="column">
-        <span class="hero__dot hero__dot--bottom-right"></span>
-        <div class="hero__item hero__item--top-left limit-height">
-          <img class="hero__image--people" src="{{site.data.images.directory | relative_url }}/{%if page.image and page.image != "" %}{{page.image}}{% else %}{{site.data.images.person_placeholder}}{%endif%}" alt="Image of {{page.title}}">
-        </div>
-      </div>
-    </div>
+<div class="person-page">
+  <div class="person-image">
+    <img src="{{site.data.images.directory | relative_url }}/{%if page.image and page.image != "" %}{{page.image}}{% else %}{{site.data.images.person_placeholder}}{%endif%}" alt="Image of {{page.title}}">
   </div>
-</section>
-
-<section class="block block__team-profile">
-  <div class="container">
-    <div class="row row--justified">
-      <div class="team-profile__biography column-m-12 column-t-7 column-d-8">
-        <div class="section-heading">
-          <h2>Biography</h2>
-          <span></span>
-        </div>
-        {{ page.biography | markdownify }}
-      </div>
-      <div class="team-profile__contact column-m-12 column-t-5 column-d-3">
-        <div class="section-heading">
-          <h2>Links</h2>
-          <span></span>
-        </div>
-        <div class="team-profile__contact-socials">
-	  {% if page.website != nil %}
-	  {% include links/home-link.html link=page.website %}
-	  {% endif %}
-          {% if page.github != nil %}
-	  {% include socials/github-link.html id=page.github %}
-          {% endif %}
-          {% if page.linkedin != nil %}
-	  {% include socials/linkedin-link.html id=page.linkedin %}
-          {% endif %}
-          {% if page.twitter != nil %}
-	  {% include socials/twitter-link.html id=page.twitter %}
-          {% endif %}
-          {% if page.facebook != nil %}
-	  {% include socials/facebook-link.html id=page.facebook %}
-          {% endif %}
-	  {% if site.ghub.edit %}
-	  {% include links/edit-link.html %}
-	  {% endif %}
-        </div>
-        {% if page.email != nil %}
-        <a href="mailto:{{page.email}}">{{page.email}}</a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</section>
-
-{% if page.publications != nil %}
-<section class="block block__publications">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Related Publications</h2>
-      <span></span>
-    </div>
-    <div class="publications__list">
-      {% for item in page.publications %}
-      {% assign project_slug = item %}
-      {% for item in site.publications %}
-      {% if item.slug == project_slug %}
-      {% include listpaper.html entry=item %}
+  <div class="person-header">
+    <div class="person-links">
+      {% if page.linkedin %}
+      <a href="{{ page.linkedin }}"><i class="fab fa-linkedin fa-lg"></i></a>
       {% endif %}
-      {% endfor %}
-      {% endfor %}
+      {% if page.twitter %}
+      <a href="{{ page.twitter }}"><i class="fab fa-twitter fa-lg"></i></a>
+      {% endif %}
+      {% if page.github %}
+      <a href="{{ page.github }}"><i class="fab fa-github fa-lg"></i></a>
+      {% endif %}
+      {% if page.facebook %}
+      <a href="{{ page.facebook }}"><i class="fab fa-facebook fa-lg"></i></a>
+      {% endif %}
+      {% if page.website %}
+      <a href="{{ page.website }}"><i class="fas fa-globe fa-lg"></i></a>
+      {% endif %}
+     {% if page.email %}
+      <a href="mailto:{{ page.email }}"><i class="far fa-envelope fa-lg"></i></a>
+      {% endif %}
+      {% if site.ghub.edit %}
+      {% include links/edit-link.html %}
+      {% endif %}
+      
     </div>
   </div>
-</section>
-{% endif %}
+  <div class="person-bio">
+    <h2>{{ page.title }}</h2>
+    {{ page.biography | markdownify }}
+  </div>
+  <div class="person-publications">
+    {% assign person_slug = page.slug %}
+    {% assign publications_by_person = "" | split: "" %}
+    
+    {% for publication in site.publications %}
+    {% for author in publication.author %}
+    {% if author.person_page == person_slug %}
+    {% assign publications_by_person = publications_by_person | push: publication %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    
+    {% assign num_pubs = publications_by_person | size %}
+    {% if num_pubs >0 %}
+    <h2>Publications</h2>
+    {% for item in publications_by_person %}
+    {% include listpaper.html entry=item %}
+    {% endfor %}
+    {%endif%}
+  </div>
+  <div class="person-projects">
+    {% assign projects_by_person = "" | split: "" %}
+    
+    {% for project in site.projects %}
+    {% for person in project.people %}
+    {% if person == person_slug %}
+    {% assign projects_by_person = projects_by_person | push: project %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    
+    {% assign num_projects = projects_by_person | size %}
+
+    {% assign research_by_person = "" | split: "" %}
+  
+    {% for project in site.research %}
+    {% for person in project.people %}
+    {% if person == person_slug %}
+    {% assign research_by_person = research_by_person | push: project %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+        
+    {% assign num_research = research_by_person | size %}
+
+    {% if num_projects >0 or num_research >0 %}
+    <h2>Projects</h2>
+    <div class="project-list">
+      {% for item in projects_by_person %}
+      {% include listproject.html entry=item %}
+      {% endfor %}
+      {% for item in research_by_person %}
+      {% include listresearch.html entry=item %}
+      {% endfor %}
+    </div>
+    {%endif%}
+  </div>
+</div>
+
+
+  
+  
