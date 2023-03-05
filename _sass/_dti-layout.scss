@@ -1,0 +1,149 @@
+.person-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.person-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.person-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-info h3 {
+  margin-top: 0;
+}
+
+.person-info p {
+  margin-bottom: 0;
+}
+
+
+// Project cards
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  transition: transform 0.2s ease-out;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.project-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.project-info p {
+  margin-bottom: 10px;
+}
+
+.learn-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F1D1D1;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.2s ease-out;
+}
+
+.learn-more:hover {
+  background-color: #F1B1B1;
+}
+
+// person page
+
+.person-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.person-image {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.person-image img {
+  width: 100%;
+}
+
+.person-header {
+  display: flex;
+  justify-content: flex-end;
+}
+.person-links {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.person-links a {
+  color: #333;
+  margin-right: 10px;
+}
+
+.person-links a:hover {
+  color: #666;
+}
+
+.person-bio {
+  grid-column: 1 / -1;
+}
+.person-publications {
+  grid-column: 1 / -1;
+}
+.person-projects {
+  grid-column: 1 / -1;
+}
+@media screen and (max-width: 768px) {
+  .person-page {
+    grid-template-columns: 1fr;
+  }
+  .person-header {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
