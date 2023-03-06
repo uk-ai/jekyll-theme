@@ -2,7 +2,7 @@
 $primary: #113249;
 $primary-light: #44637d;
 $primary-dark: #071e34;
-
+$primary-very-light: #f1f7f9
 $secondary-color: #5B8F5B;
 $quaternary-color: #395877;
 
@@ -16,7 +16,7 @@ $accent-dark: #00a58b;
 
 // Background colors
 $body-bg: #ffffff;
-$card-bg: $primary-light;
+$card-bg: $primary-very-light;
 
 // Text colors
 $text-color: $primary;
@@ -35,6 +35,7 @@ $link-hover-color: $accent-dark;
   position: relative;
   display: flex;
   margin-bottom: 20px;
+  padding: 10px;
   border: 1px solid $accent;
   border-radius: 5px;
   background-color: $card-bg;  
@@ -50,10 +51,10 @@ $link-hover-color: $accent-dark;
   width: 100px;
   height: 100px;
   overflow: hidden;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .person-image img {
@@ -85,6 +86,7 @@ $link-hover-color: $accent-dark;
   position: relative;
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 5px;
   background-color: $card-bg;
 }
 
