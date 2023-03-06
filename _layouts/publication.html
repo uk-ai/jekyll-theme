@@ -6,11 +6,12 @@ layout: page
 
 {% assign people_involved = "" | split: "" %}
 
-  {% for person in page.author %}
-  {% if person.person_page %}
-  {% assign people_involved = people_involved | push: person.person_page %}
-  {% endif %}
-  {% endfor %}
- 
+{% for person in page.author %}
+{% if person.person_page %}
+{% assign people_involved = people_involved | push: person.person_page %}
+{% endif %}
+{% endfor %}
+
+
 {% include page_people.html people=people_involved %}
 
