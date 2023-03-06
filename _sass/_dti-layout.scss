@@ -36,6 +36,7 @@ $link-hover-color: $accent-dark;
   display: flex;
   margin-bottom: 20px;
   border: 1px solid $accent;
+  border-radius: 5px;
 }
 
 .person-card:hover {
