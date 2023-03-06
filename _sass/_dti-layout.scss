@@ -37,6 +37,7 @@ $link-hover-color: $accent-dark;
   margin-bottom: 20px;
   border: 1px solid $accent;
   border-radius: 5px;
+  background-color: $card-bg;  
 }
 
 .person-card:hover {
@@ -62,11 +63,11 @@ $link-hover-color: $accent-dark;
 }
 
 .person-info h3 {
-  margin-top: 0;
+  margin-top: 15px;
 }
 
 .person-info p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 
@@ -84,6 +85,7 @@ $link-hover-color: $accent-dark;
   position: relative;
   padding: 20px;
   box-sizing: border-box;
+  background-color: $card-bg;
 }
 
 .project-card:hover {
