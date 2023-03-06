@@ -5,7 +5,7 @@
   </div>
   <div class="project-info">
     <h3>{{ include.entry.title }}</h3>
-    <p>{{ include.entry.excerpt }}</p>
+    <p>{%if include.entry.description %}{{ include.entry.description }}{%else%}{{ include.entry.excerpt }}{%endif%}</p>
     <a href="{{ include.entry.url }}" class="learn-more">Read More</a>
   </div>
 </div>
