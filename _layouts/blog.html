@@ -3,7 +3,7 @@ layout: page
 ---
 
 <div class="project-list">
-  {% for post in site.posts %}
+  {% for post in paginator.page %}
   {% include listblog.html entry=post %}
   {% endfor %}
 </div>
