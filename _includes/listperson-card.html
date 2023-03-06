@@ -1,7 +1,7 @@
 {% include extractname.html entry=include.entry %}
 <div class="person-card">
   <div class="person-image">
-    <img src="{%if include.entry.image contains 'http'%}{{include.entry.image}}{%else%}{{site.data.images.directory | relative_url }}/{%if include.entry.image and include.entry.image != "" %}{{include.entry.image}}{% else %}{{site.data.images.include.entry_placeholder}}{%endif%}{%endif%}" alt="Image of {{include.entry.title}}">
+    <img src="{%if include.entry.image contains 'http'%}{{include.entry.image}}{%else%}{{site.data.images.directory | relative_url }}/{%if include.entry.image and include.entry.image != "" %}{{include.entry.image}}{% else %}{{site.data.images.person_placeholder}}{%endif%}{%endif%}" alt="Image of {{include.entry.title}}">
   </div>
   <div class="person-info">
     <h3>{{ name }}</h3>
