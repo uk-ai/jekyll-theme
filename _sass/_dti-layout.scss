@@ -84,9 +84,10 @@ $link-hover-color: $accent-dark;
 .project-card {
   transition: transform 0.2s ease-out;
   position: relative;
-  padding: 20px;
-  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 10px;
   border-radius: 5px;
+  box-sizing: border-box;
   background-color: $card-bg;
 }
 
