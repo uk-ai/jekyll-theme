@@ -1,8 +1,35 @@
+// Primary colors
+$primary: #113249;
+$primary-light: #44637d;
+$primary-dark: #071e34;
+
+// Accent colors
+$accent: #02dcc7;
+$accent-light: #6df1e6;
+$accent-dark: #00a58b;
+
+// Background colors
+$body-bg: #ffffff;
+$card-bg: $primary-light;
+
+// Text colors
+$text-color: $primary;
+$heading-color: $accent-dark;
+
+// Button colors
+$button-bg: $primary;
+$button-color: $accent;
+
+// Link colors
+$link-color: $accent;
+$link-hover-color: $accent-dark;
+
 .person-card {
   transition: transform 0.2s ease-out;
   position: relative;
   display: flex;
   margin-bottom: 20px;
+  border: 1px solid $accent;
 }
 
 .person-image {
@@ -83,8 +110,8 @@
   bottom: 10px;
   right: 10px;
   padding: 8px 16px;
-  background-color: #113249;
-  color: #02dcc7;
+  background-color: $button-bg;
+  color: $button-color;
   font-size: 14px;
   text-decoration: none;
   border-radius: 4px;
@@ -92,7 +119,7 @@
 }
 
 .learn-more:hover {
-  background-color: #F1B1B1;
+    background-color: $foreground-color;
 }
 
 // person page
@@ -127,12 +154,12 @@
 }
 
 .person-links a {
-  color: #333;
+  color: $quaternary-color;
   margin-right: 10px;
 }
 
 .person-links a:hover {
-  color: #666;
+  color: $secondary-color;
 }
 
 .person-bio {
