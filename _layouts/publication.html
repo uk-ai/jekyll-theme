@@ -2,18 +2,7 @@
 layout: page
 ---
 
-<section class="block block__hero block__hero--standard">
-  {% if page.featured_image %}<div class="hero__bg">
-    <img src="{{ page.featured_image }}">
-  </div>{% endif %}
-  <div class="container">
-    {% include top-row-logo-and-menu.html %}
-    {% include second-row-nav-post.html back_to_url="/publications/" back_to_text="Back to publications" %}
-  </div>
-</section>
-
-<section class="block block__paper-details">
-  {{ content }}
+{{ content }}
 
 {% assign people_involved = "" | split: "" %}
 
@@ -25,4 +14,3 @@ layout: page
  
 {% include page_people.html people=people_involved %}
 
-</section>
