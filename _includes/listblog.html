@@ -1,0 +1,11 @@
+<div class="project-card">
+  <div class="project-image">
+    <img src="{{site.data.images.directory | relative_url }}/{{include.entry.featured_image}}" alt="Image of {{include.entry.title}}">
+    <p class="post-date">{{ post.date | date: "%-d %B %Y" }}</p>
+  </div>
+  <div class="project-info">
+    <h3>{{ include.entry.title }}</h3>
+    <p>{{ include.entry.excerpt }}</p>
+    <a href="{{ include.entry.url }}" class="learn-more">Read More</a>
+  </div>
+</div>
