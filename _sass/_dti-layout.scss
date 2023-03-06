@@ -1,4 +1,6 @@
 .person-card {
+  transition: transform 0.2s ease-out;
+  position: relative;
   display: flex;
   margin-bottom: 20px;
 }
