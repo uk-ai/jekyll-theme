@@ -1,6 +1,6 @@
 <header class="site-header">
 
-    <div class="hero-image" style="background-image: url({% if page.hero %}{{ page.hero | prepend: site.data.images.directory | relative_url }}{% else %}{{ site.hero | prepend: site.data.images.directory | relative_url }}{% endif %})");
+    <div class="hero-image" style="background-image: url({% if page.hero %}{{ page.hero | relative_url }}{% else %}{{ site.hero | relative_url }}{% endif %})");
 >
   <div class="wrapper">
 
