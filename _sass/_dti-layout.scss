@@ -35,13 +35,12 @@ $link-hover-color: $accent-dark;
 // To overwride width of default files.
 
 body.default {
-  padding: 0 20px;
 }
 
 #wrapper {
   max-width: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 main {
