@@ -36,10 +36,6 @@ a:visited {
   color: $accent-dark;
 }
 
-footer {
-    background-color: $primary;
-    height: 200px;
-}
 			  
 
 // To overwride width of default files.
@@ -66,11 +62,11 @@ main.default-content p {
   text-align: justify;
 }
 
-//hero image
+//header and footer
 
 .hero-image {
   position: relative;
-  height: 400px; /* adjust this height to your liking */
+  height: 250px; /* adjust this height to your liking */
   overflow: hidden;
 }
 
@@ -97,6 +93,10 @@ main.default-content p {
   z-index: 1;
 }
 
+footer {
+    background-color: $primary;
+    height: 200px;
+}
 
 
 // Person cards
