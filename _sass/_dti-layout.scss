@@ -1,3 +1,37 @@
+// Primary colors
+$primary: #113249;
+$primary-light: #44637d;
+$primary-dark: #071e34;
+$primary-very-light: #f1f7f9;
+
+$secondary-color: #5B8F5B;
+$quaternary-color: #395877;
+
+$background-color: #FFFFFF;
+$foreground-color: #000000;
+
+// Accent colors
+$accent: #02dcc7;
+$accent-light: #6df1e6;
+$accent-dark: #00a58b;
+
+// Background colors
+$body-bg: #ffffff;
+$card-bg: $primary-very-light;
+
+// Text colors
+$text-color: $primary;
+$heading-color: $accent-dark;
+
+// Button colors
+$button-bg: $primary;
+$button-color: $accent;
+
+// Link colors
+$link-color: $accent;
+$link-hover-color: $accent-dark;
+
+
 // To overwride width of default files.
 
 #wrapper {
@@ -22,9 +56,21 @@ main p {
 }
 
 
+// Person cards
+
 .person-card {
+  transition: transform 0.2s ease-out;
+  position: relative;
   display: flex;
   margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $card-bg;  
+}
+
+.person-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .person-image {
@@ -32,7 +78,10 @@ main p {
   width: 100px;
   height: 100px;
   overflow: hidden;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .person-image img {
@@ -42,11 +91,11 @@ main p {
 }
 
 .person-info h3 {
-  margin-top: 0;
+  margin-top: 15px;
 }
 
 .person-info p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 
@@ -62,8 +111,11 @@ main p {
 .project-card {
   transition: transform 0.2s ease-out;
   position: relative;
-  padding: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
   box-sizing: border-box;
+  background-color: $card-bg;
 }
 
 .project-card:hover {
@@ -100,17 +152,21 @@ main p {
 }
 
 .learn-more {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #F1D1D1;
-  color: #333;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  background-color: $button-bg;
+  color: $button-color;
+  font-size: 14px;
   text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.2s ease-out;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
 .learn-more:hover {
-  background-color: #F1B1B1;
+    background-color: $foreground-color;
 }
 
 // person page
@@ -145,12 +201,12 @@ main p {
 }
 
 .person-links a {
-  color: #333;
+  color: $quaternary-color;
   margin-right: 10px;
 }
 
 .person-links a:hover {
-  color: #666;
+  color: $secondary-color;
 }
 
 .person-bio {
@@ -170,4 +226,39 @@ main p {
     justify-content: center;
     margin-top: 20px;
   }
+}
+
+.partner-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.partner-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

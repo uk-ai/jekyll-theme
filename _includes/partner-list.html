@@ -1,11 +1,3 @@
-<section class="block block__logo-grid">
-  <div class="container">
-    <div class="logo-grid__grid">
-      {% for partner in site.data.about.partners %}
-      <a class="logo-grid__logo" href="{{ partner.link }}">
-        <img src="{{site.data.images.directory | relative_url }}/{{ partner.logo }}" alt="{{ partner.name }}">
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% for partner in site.data.about.partners %}
+{% include listpartner.html entry=partner %}
+{% endfor %}
