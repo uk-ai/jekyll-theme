@@ -2,8 +2,11 @@
 
   <div class="wrapper">
 
+    <div class="hero-image" background-image="{% if page.hero %}{{ page.hero | prepend: site.data.images.directory | relative_url }}{% else %}{{ site.hero | prepend: site.data.images.directory | relative_url }}{% endif %}" alt="{{ site.title }}");
+>
     {% include banner.html %}
     {% include nav-bar.html %}
+    </div>
 
   </div>
 </header>
