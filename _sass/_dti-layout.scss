@@ -64,6 +64,9 @@ main.default-content p {
 
 //header and footer
 
+.site-header a {
+    color: $accent;
+}
 .hero-image {
   position: relative;
   height: 250px; /* adjust this height to your liking */
