@@ -353,6 +353,8 @@ footer {
 
 .plenary-session {
   transition: transform 0.2s ease-out;    
+  position: relative;
+  display: flex;
   background-color: #ffcc66;
   padding: 10px;
   border: 1px solid #cc9933;
@@ -372,4 +374,6 @@ footer {
 .workshop-session {
   background-color: #ffffcc;
   border-color: #cccc99;
+  padding: 10px;
+  border: 1px solid #cc9933;
 }
