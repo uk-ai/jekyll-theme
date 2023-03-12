@@ -350,7 +350,11 @@ footer {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
-
+.session-info a {
+    display: flex; /* Use flexbox to make the link fill the entire card */
+    flex: 1; /* Allow the link to fill the entire card */
+    text-decoration: none; /* Remove the underline from the link text */
+}   
 .keynote-session, .presentation-session {
   transition: transform 0.2s ease-out;    
   background-color: #cceeff;
