@@ -354,6 +354,11 @@ footer {
     display: flex; /* Use flexbox to make the link fill the entire card */
     flex: 1; /* Allow the link to fill the entire card */
     text-decoration: none; /* Remove the underline from the link text */
+    color: inherit;
+}   
+.session-info a:hover {
+    text-decoration: none; /* Remove the underline from the link text */
+    color: inherit;
 }   
 .keynote-session, .presentation-session {
   transition: transform 0.2s ease-out;    
