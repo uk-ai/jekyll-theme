@@ -331,6 +331,7 @@ footer {
   margin: 0 auto;
   grid-gap: 10px;
   margin-top: 20px;
+  
 }
 
 .time-slot {
@@ -367,34 +368,34 @@ footer {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.keynote-session {
+.keynote-session, .presentation-session {
   transition: transform 0.2s ease-out;    
   background-color: #cceeff;
   border-color: #99ccff;
 }
-.keynote-session:hover {
+.keynote-session:hover, .presentation-session:hover {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.breakout-session {
+.workshop-session, breakout-session {
   transition: transform 0.2s ease-out;    
   background-color: #e6e6e6;
   border-color: #b3b3b3;
 }
-.breakout-session:hover {
+.workshop-session:hover, breakout-session {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.workshop-session {
+.break-session {
   transition: transform 0.2s ease-out;    
   background-color: #ffffcc;
   border-color: #cccc99;
   padding: 10px;
   border: 1px solid #cc9933;
 }
-.workshop-session:hover {
+.break-session:hover {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
