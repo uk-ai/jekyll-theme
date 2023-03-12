@@ -328,9 +328,8 @@ footer {
 }
 
 .session {
-  background-color: #fff;
+  background-color: $background-color;
   padding: 10px;
-  border: 1px solid #ccc;
 }
 
 .session-info {
@@ -341,10 +340,10 @@ footer {
   transition: transform 0.2s ease-out;    
   position: relative;
   display: flex;
-  background-color: #ffcc66;
   padding: 10px;
-  border: 1px solid #cc9933;
   grid-row: span 1 / -1;
+  border-radius: 5px;
+  background-color: $card-bg;
 }
 .plenary-session:hover {
   transform: translateY(-10px);
@@ -362,8 +361,8 @@ footer {
 }   
 .keynote-session, .presentation-session {
   transition: transform 0.2s ease-out;    
-  background-color: #cceeff;
-  border-color: #99ccff;
+  border-radius: 5px;
+  background-color: $card-bg;
 }
 .keynote-session:hover, .presentation-session:hover {
   transform: translateY(-10px);
@@ -371,9 +370,10 @@ footer {
 }
 
 .workshop-session, breakout-session {
-  transition: transform 0.2s ease-out;    
-  background-color: #e6e6e6;
-  border-color: #b3b3b3;
+  transition: transform 0.2s ease-out;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $card-bg;
 }
 .workshop-session:hover, breakout-session {
   transform: translateY(-10px);
@@ -382,10 +382,9 @@ footer {
 
 .break-session, poster-session {
   transition: transform 0.2s ease-out;    
-  background-color: #ffffcc;
-  border-color: #cccc99;
   padding: 10px;
-  border: 1px solid #cc9933;
+  border-radius: 5px;
+  background-color: $card-bg;
 }
 .break-session:hover, poster-session {
   transform: translateY(-10px);
