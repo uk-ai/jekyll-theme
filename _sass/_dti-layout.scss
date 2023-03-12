@@ -196,23 +196,6 @@ footer {
   margin-bottom: 40px;
 }
 
-.learn-more {
-  display: block;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 8px 16px;
-  background-color: $button-bg;
-  color: $button-color;
-  font-size: 14px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-}
-
-.learn-more:hover {
-    background-color: $foreground-color;
-}
 
 // person page
 
@@ -398,4 +381,22 @@ footer {
 .break-session:hover, poster-session {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.learn-more {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  background-color: $button-bg;
+  color: $button-color;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.learn-more:hover {
+    background-color: $foreground-color;
 }
