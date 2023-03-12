@@ -2,4 +2,21 @@
 layout: page
 ---
 
-{{ content }}
+<div class="event-page">
+  <div class="event-image">
+    <img src="{{site.data.images.directory | relative_url }}/{%if page.image and page.image != "" %}{{page.image}}{% else %}{{site.data.images.event_placeholder}}{%endif%}" alt="Image of {{page.title}}">
+  </div>
+  <div class="event-header">
+    <div class="event-links">
+      {% if site.ghub.edit %}
+      {% include links/edit-link.html %}
+      {% endif %}
+      
+    </div>
+  </div>
+  <div class="event-info">
+    <h2>{{ page.title }}</h2>
+    {{ content | markdownify }}
+  </div>
+  </div>
+</div>
