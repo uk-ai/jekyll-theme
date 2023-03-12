@@ -358,11 +358,15 @@ footer {
 .card a:hover {
     text-decoration: none; /* Remove the underline from the link text */
     color: inherit;
-}   
+}
+.card a:visited {
+    text-decoration: none;
+    color: inherit;
+}
 .keynote-session, .presentation-session {
     transition: transform 0.2s ease-out;
     padding: 10px;
-  border-radius: 5px;
+    border-radius: 5px;
   background-color: $card-bg;
 }
 .keynote-session:hover, .presentation-session:hover {
