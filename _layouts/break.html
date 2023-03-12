@@ -3,9 +3,11 @@ layout: page
 ---
 
 <div class="event-page">
+  {%if page.image and page.image != "" %}  
   <div class="event-image">
-    <img src="{{site.data.images.directory | relative_url }}/{%if page.image and page.image != "" %}{{page.image}}{% else %}{{site.data.images.event_placeholder}}{%endif%}" alt="Image of {{page.title}}">
+    <img src="{{ page.image | relative_url }}" alt="Image of {{page.title}}">
   </div>
+  {%endif%}
   <div class="event-header">
     <div class="event-links">
       {% if site.ghub.edit %}
