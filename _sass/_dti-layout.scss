@@ -360,7 +360,8 @@ footer {
     color: inherit;
 }   
 .keynote-session, .presentation-session {
-  transition: transform 0.2s ease-out;    
+    transition: transform 0.2s ease-out;
+    padding: 10px;
   border-radius: 5px;
   background-color: $card-bg;
 }
