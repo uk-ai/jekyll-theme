@@ -380,6 +380,10 @@ footer {
   border-radius: 5px;
   background-color: $card-bg;
 }
+
+.talk-session{
+  background-color: $card-bg;
+}
 .workshop-session:hover, breakout-session {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
