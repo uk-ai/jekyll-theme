@@ -374,14 +374,26 @@ footer {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.workshop-session, breakout-session, talk-session {
+.workshop-session, breakout-session {
   transition: transform 0.2s ease-out;
   padding: 10px;
   border-radius: 5px;
   background-color: $card-bg;
 }
 
-.workshop-session:hover, breakout-session, talk-session {
+.talk-session {
+  transition: transform 0.2s ease-out;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $card-bg;
+}
+
+.workshop-session:hover, breakout-session {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.talk-session {
   transform: translateY(-10px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
