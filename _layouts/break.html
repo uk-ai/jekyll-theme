@@ -18,6 +18,15 @@ layout: page
   </div>
   <div class="event-info">
     <h2>{{ page.title }}</h2>
+    {% if page.start_time %}
+    <p><b>Start</b>: {{ page.start_time | date: "%H:%M %Z" }}</p>
+    {%endif%}
+    {% if page.end_time %}
+    <p><b>Finish</b>: {{ page.end_time | date: "%H:%M %Z" }}</p>
+    {% endif%}
+    {% if page.location %}
+    <p><b>Location</b>: {{ page.location }}</p>
+    {% endif %}
     {{ content | markdownify }}
   </div>
   </div>
