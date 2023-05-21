@@ -21,7 +21,7 @@ layout: page
 
 {% capture page_start %}{{ page.start_time | date: '%s'}}{%endcapture%}
 {% capture page_end %}{{ page.end_time | date: '%s'}}{%endcapture%}
-{% assign padding_bottom = 10 %}
+{% assign padding_bottom = 60 %}
 <div class="schedule">
   {% for session in sessions %}
   {% capture start_time %}{{ session.start_time | date: "%H:%M" }}{% endcapture %}
@@ -35,7 +35,7 @@ layout: page
     
     {%endif %}
     {% if session.layout == "plenary" or session.layout == "break" %}
-      <div class="card {{ session.layout }}-session" style="grid-column: span {{max_track_number}};grid-row: {{ row }};height: {{ length | times: 2 | plus: padding_bottom}}px">
+      <div class="card {{ session.layout }}-session" style="grid-column: span {{max_track_number}};grid-row: {{ row }};height: {{ length | times: 3 | plus: padding_bottom}}px">
     <a href="{{ session.url | relative_url }}">
 	<div class="session-info">
           <h3>{{ session.title }}</h3>
