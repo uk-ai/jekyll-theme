@@ -41,6 +41,7 @@ layout: page
           <h3>{{ session.title }}</h3>
           <p>{{ session.speaker }}</p>
           <p>{{ start_time }} - {{ end_time }}</p>
+	  {% if session.excerpt %}<p>{{ session.excerpt }}</p>{% endif %}
         </div>
     </a>
       </div>
@@ -51,6 +52,7 @@ layout: page
 	  <h3>{{ session.title }}</h3>
           <p>{{ session.speaker }}</p>
           <p>{{ start_time }} - {{ end_time }}</p>
+	  {% if session.excerpt %}<p>{{ session.excerpt }}</p>{% endif %}
         </div>
     </a>
       </div>
