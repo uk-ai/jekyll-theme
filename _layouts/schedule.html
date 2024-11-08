@@ -10,6 +10,12 @@ layout: page
 {% assign sessions = site.sessions | sort: 'start_time' %}
 
 {% assign max_track_number = 0 %}
+{% for session in sessions %}
+  {% if session.track > max_track_number %}
+    {% assign max_track_number = session.track %}
+  {% endif %}
+{% endfor %}
+
 
 {% assign row = 1 %}
 {% capture last %}{{'1900-00-00' | date: '%s' }}{% endcapture %}
