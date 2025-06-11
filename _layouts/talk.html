@@ -42,10 +42,10 @@ layout: page
 
   <div class="post-content e-content" itemprop="articleBody">
     {% if page.start_time %}
-    <p><b>Start</b>: {{ page.start_time | date: "%H:%M %Z", "Europe/London" }}</p>
+    <p><b>Start</b>: {{ page.start_time | date: "%H:%M %Z" }}</p>
     {%endif%}
     {% if page.end_time %}
-    <p><b>Finish</b>: {{ page.end_time | date: "%H:%M %Z", "Europe/London" }}</p>
+    <p><b>Finish</b>: {{ page.end_time | date: "%H:%M %Z" }}</p>
     {% endif%}
     {% if page.location %}
     <p><b>Location</b>: {{ page.location }}</p>
