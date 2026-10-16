@@ -68,8 +68,8 @@ main.default-content p {
 }
 .hero-image {
   position: relative;
-  height: 250px; /* adjust this height to your liking */
-  overflow: hidden;
+  height: auto;
+  overflow: visible;
 }
 
 .hero-image:before {
@@ -96,8 +96,12 @@ main.default-content p {
 }
 
 footer {
-    background-color: $primary;
-    height: 200px;
+  background-color: $primary;
+  color: #ffffff;
+  height: auto;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  line-height: 1.4;
 }
 
 

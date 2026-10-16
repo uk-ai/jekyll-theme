@@ -12,3 +12,60 @@
 .container {
   max-width: none;
 }
+
+// Compact header and footer. These follow the Minima import so they win.
+.site-header {
+  line-height: 1.4;
+}
+
+.site-header .hero-image {
+  height: auto;
+  overflow: visible;
+  padding: 0.75rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .site-header .hero-image .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .site-header .hero-image .wrapper::after {
+    content: none;
+    display: none;
+  }
+
+  .site-header .banner {
+    margin: 0;
+    line-height: 0;
+  }
+
+  .site-header .banner img {
+    display: block;
+    height: auto;
+  }
+
+  .site-header .site-nav {
+    position: static;
+    float: none;
+    margin: 0;
+    border: none;
+    background: transparent;
+  }
+}
+
+footer {
+  height: auto;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4;
+}
+
+footer a,
+footer a:visited,
+footer a:hover {
+  color: #ffffff;
+}
